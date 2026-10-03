@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea tu presupuesto personalizado de flores con Florea.">
+    <title>Presupuesto | Florea</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/presupuesto.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="brand" href="../index.html" aria-label="Florea, página de inicio">
+                <span class="brand-script">Florea</span>
+                
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="../index.html">Inicio</a>
+                <a href="galeria.html">Galería</a>
+                <a href="contacto.html">Contacto</a>
+                <a class="active" href="presupuesto.html">Presupuesto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Hazlo a tu manera</p>
+                <h1>Tu ramo, tu historia</h1>
+                <p>Cuéntanos qué necesitas y calcula tu presupuesto al instante. Sin sorpresas y sin botones de calcular.</p>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="budget-title">
+            <div class="container">
+                <div class="form-card">
+                    <form id="budget-form" novalidate>
+                        <section class="form-section" aria-labelledby="contact-data-title">
+                            <p class="eyebrow">01 · Tus datos</p>
+                            <h2 id="contact-data-title">¿A quién podemos contactar?</h2>
+
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="name">Nombre</label>
+                                    <input id="name" name="name" type="text" autocomplete="given-name" minlength="3" maxlength="15" required>
+                                    <span class="error" id="name-error" aria-live="polite"></span>
+                                </div>
+
+                                <div class="field">
+                                    <label for="surname">Apellidos</label>
+                                    <input id="surname" name="surname" type="text" autocomplete="family-name" minlength="4" maxlength="40" required>
+                                    <span class="error" id="surname-error" aria-live="polite"></span>
+                                </div>
+
+                                <div class="field">
+                                    <label for="phone">Teléfono</label>
+                                    <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="9" required>
+                                    <span class="error" id="phone-error" aria-live="polite"></span>
+                                </div>
+
+                                <div class="field">
+                                    <label for="email">Correo electrónico</label>
+                                    <input id="email" name="email" type="email" autocomplete="email" required>
+                                    <span class="error" id="email-error" aria-live="polite"></span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="form-section" aria-labelledby="budget-options-title">
+                            <p class="eyebrow">02 · Tu ramo</p>
+                            <h2 id="budget-options-title">Construyámoslo juntos</h2>
+
+                            <fieldset class="choice-group">
+                                <legend>Producto</legend>
+                                <div class="choice-grid">
+                                    <div class="choice-card">
+                                        <input id="product-none" name="product" type="radio" value="0" checked>
+                                        <label for="product-none">
+                                            <strong>Elige después</strong>
+                                            <small>Sin producto · 0 €</small>
+                                        </label>
+                                    </div>
+                                    <div class="choice-card">
+                                        <input id="product-mini" name="product" type="radio" value="28">
+                                        <label for="product-mini">
+                                            <strong>Mini Florea</strong>
+                                            <small>Detalle delicado · 28 €</small>
+                                        </label>
+                                    </div>
+                                    <div class="choice-card">
+                                        <input id="product-classic" name="product" type="radio" value="45">
+                                        <label for="product-classic">
+                                            <strong>Florea Clásico</strong>
+                                            <small>Ramo especial · 45 €</small>
+                                        </label>
+                                    </div>
+                                    <div class="choice-card">
+                                        <input id="product-premium" name="product" type="radio" value="68">
+                                        <label for="product-premium">
+                                            <strong>Florea Premium</strong>
+                                            <small>Composición protagonista · 68 €</small>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="field field-spaced">
+                                <label for="deadline">Plazo de entrega (días)</label>
+                                <input id="deadline" name="deadline" type="number" min="0" step="1" value="0" inputmode="numeric">
+                                <span class="error" id="deadline-error" aria-live="polite"></span>
+                                <small>Más tiempo permite organizar mejor el pedido y aplica un descuento progresivo.</small>
+                            </div>
+
+                            <fieldset class="choice-group field-spaced">
+                                <legend>Extras</legend>
+                                <div class="extras">
+                                    <label class="extra-option">
+                                        <input type="checkbox" name="extra" value="6">
+                                        <span>Tarjeta escrita a mano · +6 €</span>
+                                    </label>
+                                    <label class="extra-option">
+                                        <input type="checkbox" name="extra" value="8">
+                                        <span>Envoltorio premium · +8 €</span>
+                                    </label>
+                                    <label class="extra-option">
+                                        <input type="checkbox" name="extra" value="12">
+                                        <span>Jarrón de cristal · +12 €</span>
+                                    </label>
+                                    <label class="extra-option">
+                                        <input type="checkbox" name="extra" value="5">
+                                        <span>Detalle dulce · +5 €</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <div class="total-box" aria-live="polite">
+                                <span>Presupuesto estimado</span>
+                                <strong class="total-price" id="total-price">0 €</strong>
+                            </div>
+                        </section>
+
+                        <section class="form-section" aria-labelledby="privacy-title">
+                            <p class="eyebrow">03 · Finalizar</p>
+                            <h2 id="privacy-title">Un último detalle</h2>
+
+                            <label class="privacy">
+                                <input id="privacy" name="privacy" type="checkbox" required>
+                                <span>Acepto las condiciones de privacidad y autorizo el tratamiento de mis datos para gestionar esta solicitud.</span>
+                            </label>
+                            <span class="error" id="privacy-error" aria-live="polite"></span>
+
+                            <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+                            <button class="btn btn-soft" type="reset">Reiniciar</button>
+
+                            <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <span class="brand-script footer-brand">Florea</span>
+                <p>Flores con alma para momentos que merecen quedarse.</p>
+            </div>
+            <div>
+                <h2 class="footer-title">Visítanos</h2>
+                <address>Av. del Regne de València, 63<br>46005 València, Valencia, España</address>
+            </div>
+            <div>
+                <h2 class="footer-title">Síguenos</h2>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© 2026 Florea. Todos los derechos reservados.</span>
+            <a href="#">Aviso legal</a>
+        </div>
+    </footer>
+</body>
+</html>

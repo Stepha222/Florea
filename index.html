@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Florea, floristería virtual de flores frescas, ramos y detalles románticos.">
+    <title>Florea | Flores que hablan por ti</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="brand" href="index.html" aria-label="Florea, página de inicio">
+                <span class="brand-script">Florea</span>
+        
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a class="active" href="index.html">Inicio</a>
+                <a href="views/galeria.html">Galería</a>
+                <a href="views/contacto.html">Contacto</a>
+                <a href="views/presupuesto.html">Presupuesto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Pequeños gestos, grandes emociones</p>
+                    <h1 id="hero-title">Flores que hablan <span>por ti</span></h1>
+                    <p class="hero-text">
+                        Creamos ramos delicados y composiciones llenas de cariño para celebrar,
+                        agradecer, acompañar y convertir cualquier día en un momento especial.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="views/presupuesto.html">Crear mi ramo</a>
+                        <a class="btn btn-soft" href="views/galeria.html">Ver inspiración</a>
+                    </div>
+                    <div class="hero-note">
+                        <span class="heart" aria-hidden="true">♡</span>
+                        Preparado con amor y entregado con una sonrisa.
+                    </div>
+                </div>
+
+                <div class="hero-art" aria-label="Composición floral decorativa">
+                    <div class="sun-circle"></div>
+                    <div class="flower flower-one">✿</div>
+                    <div class="flower flower-two">✿</div>
+                    <div class="flower flower-three">✿</div>
+                    <div class="leaf leaf-one"></div>
+                    <div class="leaf leaf-two"></div>
+                    <div class="hero-card">
+                
+                        <small>hecho con amor · Florea</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-cream" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Lo hacemos sencillo</p>
+                    <h2 id="services-title">Un poquito de Florea para cada ocasión</h2>
+                    <p>Elige el sentimiento y nosotros ponemos las flores.</p>
+                </div>
+
+                <div class="cards-grid cards-four">
+                    <article class="service-card">
+                        <div class="card-icon">♡</div>
+                        <h3>Amor</h3>
+                        <p>Ramos románticos y delicados para decir “te quiero” sin necesidad de palabras.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="card-icon">✦</div>
+                        <h3>Celebrar</h3>
+                        <p>Colores alegres y flores frescas para cumpleaños, logros y días que merecen brindar.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="card-icon">❀</div>
+                        <h3>Agradecer</h3>
+                        <p>Detalles cálidos para decir gracias con un gesto bonito, cercano y especial.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="card-icon">☼</div>
+                        <h3>Porque sí</h3>
+                        <p>A veces no hace falta una ocasión. Un ramo porque sí también puede cambiar el día.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-pink" aria-labelledby="featured-title">
+            <div class="container split-section">
+                <div>
+                    <p class="eyebrow">Nuestra forma de florecer</p>
+                    <h2 id="featured-title">Delicadeza en cada detalle</h2>
+                    <p>
+                        En Florea creemos que regalar flores no consiste solamente en elegir un ramo.
+                        Consiste en pensar en una persona, recordar un momento y crear algo que tenga
+                        sentido para ella.
+                    </p>
+                    <ul class="check-list">
+                        <li>Flores seleccionadas con cariño.</li>
+                        <li>Composiciones suaves y atemporales.</li>
+                        <li>Opciones personalizables para cada presupuesto.</li>
+                    </ul>
+                    <a class="text-link" href="views/presupuesto.html">Diseñar mi detalle <span>→</span></a>
+                </div>
+
+                <div class="quote-card">
+                    <span class="quote-mark">“</span>
+                    <p>Las flores no solucionan todo, pero consiguen que algunos momentos sean mucho más bonitos.</p>
+                    <span class="quote-author">— El pequeño secreto de Florea</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="news-title">
+            <div class="container">
+                <div class="section-heading heading-row">
+                    <div>
+                        <p class="eyebrow">Desde nuestro taller</p>
+                        <h2 id="news-title">Historias que florecen</h2>
+                    </div>
+                    <span class="news-status" id="news-status">Cargando novedades…</span>
+                </div>
+                <div class="news-grid" id="news-list" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container cta-inner">
+                <div>
+                    <p class="eyebrow">¿Tienes una idea?</p>
+                    <h2 id="cta-title">Cuéntanos cómo quieres que se sienta tu regalo.</h2>
+                </div>
+                <a class="btn btn-primary" href="views/contacto.html">Hablemos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <span class="brand-script footer-brand">Florea</span>
+                <p>Flores con alma para momentos que merecen quedarse.</p>
+            </div>
+            <div>
+                <h2 class="footer-title">Visítanos</h2>
+                <address>Av. del Regne de València, 63<br>46005 València, Valencia, España</address>
+            </div>
+            <div>
+                <h2 class="footer-title">Síguenos</h2>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+                    <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© 2026 Florea. Todos los derechos reservados.</span>
+            <a href="#">Aviso legal</a>
+        </div>
+    </footer>
+</body>
+</html>

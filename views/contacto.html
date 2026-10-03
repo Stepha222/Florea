@@ -1,230 +1,213 @@
 <!DOCTYPE html>
-
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contacta con Florea y consulta nuestra ubicación.">
     <title>Contacto | Florea</title>
+
     <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../css/styles.css">
 
-<link rel="stylesheet" href="../css/styles.css">
-
-<link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
->
-
-<script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    defer>
-</script>
-
-<script src="../js/main.js" defer></script>
-<script src="../js/contacto.js" defer></script>
-```
-
+    <script src="../js/main.js" defer></script>
 </head>
 
 <body>
 
-```
-<header class="site-header">
-    <div class="container nav-wrapper">
+    <header class="site-header">
+        <div class="container nav-wrapper">
 
-        <a class="brand" href="../index.html" aria-label="Florea, página de inicio">
-            <span class="brand-script">Florea</span>
-        </a>
+            <a class="brand" href="../index.html" aria-label="Florea, página de inicio">
+                <span class="brand-script">Florea</span>
+            </a>
 
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Abrir menú"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <nav class="main-nav" aria-label="Navegación principal">
-            <a href="../index.html">Inicio</a>
-            <a href="galeria.html">Galería</a>
-            <a class="active" href="contacto.html">Contacto</a>
-            <a href="presupuesto.html">Presupuesto</a>
-        </nav>
-
-    </div>
-</header>
-
-
-<main>
-
-    <section class="page-hero">
-        <div class="container">
-
-            <p class="eyebrow">Estamos aquí</p>
-
-            <h1>Hablemos de flores</h1>
-
-            <p>
-                Ven a conocernos, descubre nuestro pequeño rincón floral
-                y encuentra fácilmente nuestra ubicación.
-            </p>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="../index.html">Inicio</a>
+                <a href="galeria.html">Galería</a>
+                <a class="active" href="contacto.html">Contacto</a>
+                <a href="presupuesto.html">Presupuesto</a>
+            </nav>
 
         </div>
-    </section>
+    </header>
 
+    <main>
 
-    <section class="section" aria-labelledby="contact-title">
+        <section class="page-hero">
+            <div class="container">
 
-        <div class="container contact-grid">
+                <p class="eyebrow">Estamos aquí</p>
 
-            <article class="info-card">
-
-                <p class="eyebrow">Florea Valencia</p>
-
-                <h2 id="contact-title" class="section-title">
-                    Un rincón lleno de flores
-                </h2>
+                <h1>Hablemos de flores</h1>
 
                 <p>
-                    Somos una floristería ficticia creada para este proyecto.
-                    Puedes utilizar estos datos como base y cambiarlos por los tuyos.
+                    Ven a conocernos, descubre nuestro pequeño rincón floral
+                    y encuentra fácilmente nuestra ubicación.
                 </p>
 
+            </div>
+        </section>
 
-                <ul class="info-list">
+        <section class="section" aria-labelledby="contact-title">
 
-                    <li>
-                        <strong>Dirección</strong>
-                        Av. del Regne de València, 63<br>
-                        46005 València, Valencia, España
-                    </li>
+            <div class="container contact-grid">
 
-                    <li>
-                        <strong>Teléfono</strong>
-                        <a href="tel:+34960000000">
-                            +34 960 000 000
-                        </a>
-                    </li>
+                <article class="info-card">
 
-                    <li>
-                        <strong>Email</strong>
-                        <a href="mailto:hola@florea.es">
-                            hola@florea.es
-                        </a>
-                    </li>
+                    <p class="eyebrow">Florea Valencia</p>
 
-                    <li>
-                        <strong>Horario</strong>
-                        Lunes a sábado · 09:30–19:30
-                    </li>
+                    <h2 id="contact-title" class="section-title">
+                        Un rincón lleno de flores
+                    </h2>
 
-                </ul>
+                    <p>
+                        Somos una floristería ficticia creada para este proyecto.
+                        Puedes utilizar estos datos como base y cambiarlos por los tuyos.
+                    </p>
 
-                <p id="map-status" class="map-message">
-                    Cargando mapa…
+                    <ul class="info-list">
+
+                        <li>
+                            <strong>Dirección</strong>
+                            Av. del Regne de València, 63<br>
+                            46005 València, Valencia, España
+                        </li>
+
+                        <li>
+                            <strong>Teléfono</strong>
+                            <a href="tel:+34960000000">
+                                +34 960 000 000
+                            </a>
+                        </li>
+
+                        <li>
+                            <strong>Email</strong>
+                            <a href="mailto:hola@florea.es">
+                                hola@florea.es
+                            </a>
+                        </li>
+
+                        <li>
+                            <strong>Horario</strong>
+                            Lunes a sábado · 09:30–19:30
+                        </li>
+
+                    </ul>
+
+                    <p id="map-status" class="map-message">
+                        Consulta nuestra ubicación en el mapa.
+                    </p>
+
+                </article>
+
+                <div class="map-wrapper">
+
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.3863%2C39.4649%2C-0.3663%2C39.4749&layer=mapnik&marker=39.4699%2C-0.3763"
+                        height="560"
+                        style="border: 0; width: 100%;"
+                        loading="lazy"
+                        title="Ubicación de Florea en Valencia">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+                <span class="brand-script footer-brand">
+                    Florea
+                </span>
+
+                <p>
+                    Flores con alma para momentos que merecen quedarse.
                 </p>
+            </div>
 
-            </article>
+            <div>
 
-<div class="map-wrapper">
-    <iframe
-        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.3863%2C39.4649%2C-0.3663%2C39.4749&layer=mapnik&marker=39.4699%2C-0.3763"
-        width="100%"
-        height="560"
-        style="border: 0;"
-        loading="lazy"
-        title="Ubicación de Florea en Valencia">
-    </iframe>
-</div>
-           
+                <h2 class="footer-title">
+                    Visítanos
+                </h2>
 
-    </section>
+                <address>
+                    Av. del Regne de València, 63<br>
+                    46005 València, Valencia, España
+                </address>
 
-</main>
+            </div>
 
+            <div>
 
-<footer class="site-footer">
+                <h2 class="footer-title">
+                    Síguenos
+                </h2>
 
-    <div class="container footer-grid">
+                <div class="social-links">
 
-        <div>
-            <span class="brand-script footer-brand">
-                Florea
-            </span>
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
 
-            <p>
-                Flores con alma para momentos que merecen quedarse.
-            </p>
-        </div>
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Facebook
+                    </a>
 
+                    <a
+                        href="https://www.pinterest.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Pinterest
+                    </a>
 
-        <div>
-
-            <h2 class="footer-title">
-                Visítanos
-            </h2>
-
-            <address>
-                Av. del Regne de València, 63<br>
-                46005 València, Valencia, España
-            </address>
-
-        </div>
-
-
-        <div>
-
-            <h2 class="footer-title">
-                Síguenos
-            </h2>
-
-            <div class="social-links">
-
-                <a
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Instagram
-                </a>
-
-                <a
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Facebook
-                </a>
-
-                <a
-                    href="https://www.pinterest.com/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Pinterest
-                </a>
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+        <div class="container footer-bottom">
 
+            <span>
+                © 2026 Florea. Todos los derechos reservados.
+            </span>
 
-    <div class="container footer-bottom">
+            <a href="#">
+                Aviso legal
+            </a>
 
-        <span>
-            © 2026 Florea. Todos los derechos reservados.
-        </span>
+        </div>
 
-        <a href="#">
-            Aviso legal
-        </a>
-
-    </div>
-
-</footer>
-```
+    </footer>
 
 </body>
 </html>
